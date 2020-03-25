@@ -1,0 +1,160 @@
+    	<!--================Header Menu Area =================-->
+	<header class="header_area">
+        <div class="top_menu row m0">
+            <div class="container-fluid">
+                <div class="float-left">
+                    <p>Entre em contato: 0800 030 0200                </p>
+                </div>
+                <div class="float-right">
+                    <ul class="right_side">
+                        <li>
+                            <a [routerLink]="['/login']">
+                                Login
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand logo_h" href="index.html">
+                        <img src="/assets/img/logo.png" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                     aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <div class="row w-100">
+                            <div class="col-lg-7 pr-0">
+                                <ul class="nav navbar-nav center_nav pull-right">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" [routerLink]="['/collection']">Coleção</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" [routerLink]="['/contact']">Fale Conosco</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+	<!--================Header Menu Area =================-->
+    <!--================Banner Area =================-->
+	<section class="banner_area">
+		<div class="banner_inner d-flex align-items-center">
+			<div class="container">
+				<div class="banner_content text-center">
+                    <h2>Nova Coleção de Inverno</h2>
+					<div class="page_link">
+						<a [routerLink]="['']">Home</a>
+						<a [routerLink]="['/collection']">Coleção</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================Home Banner Area =================-->
+
+<section class="cat_product_area section_gap">
+    <div class="container-fluid">
+        <div class="row flex-row-reverse">
+            <div class="col-lg-9">
+                <div class="product_top_bar">
+                    <div class="left_dorp">
+                        <select class="sorting">
+                            <option value="1">Mais relevante</option>
+                            <option value="2">Menor preço</option>
+                            <option value="4">Maior preço</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <div class="latest_product_inner row">
+                        <div class="col-lg-3 col-md-3 col-sm-6">
+                            <div class="f_p_item">
+                                <div class="f_p_img">
+                                    <img class="img-fluid" src="../../../assets/img/product/feature-product/f-p-1.jpg" alt="">
+                                    <div class="p_icon">
+                                        <a href="#">
+                                            <i class="lnr lnr-heart"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="lnr lnr-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a [routerLink]="['/product',1]">
+                                    <h4>Long Sleeve TShirt</h4>
+                                </a>
+                                <h5>$150.00</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="left_sidebar_area">
+                    <aside class="left_widgets cat_widgets">
+                        <div class="l_w_title">
+                            <h3>Categorias</h3>
+                        </div>
+                        <div class="widgets_inner">
+                            <ul class="list">
+                                <li>
+                                    <a href="#">Calças</a>
+                                </li>
+                                <li>
+                                    <a href="#">Vestidos</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blusas</a>
+                                </li>
+                                <li>
+                                    <a href="#">Conjunto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                    <aside class="left_widgets p_filter_widgets">
+                        <div class="l_w_title">
+                            <h3>Filtrar</h3>
+                        </div>
+                        <div class="widgets_inner">
+                            <h4>Marcas</h4>
+                            <ul class="list">
+                                <li>
+                                    <a href="#">Armani</a>
+                                </li>
+                                <li>
+                                    <a href="#">Chanel</a>
+                                </li>
+                                <li class="#">
+                                    <a href="#">Dior</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dolce & Gabbana</a>
+                                </li>
+                                <li>
+                                    <a href="#">Gucci</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
