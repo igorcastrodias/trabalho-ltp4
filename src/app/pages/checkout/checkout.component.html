@@ -1,1 +1,68 @@
-<p>checkout works!</p>
+<section class="checkout_area section_gap">
+    <div class="container">
+        <div class="returning_customer">
+            <p>If you have shopped with us before, please enter your details in the boxes below. If you are a new customer, please proceed
+                to the Billing & Shipping section.</p>
+        </div>
+        <div class="billing_details">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3>Dados da Entrega</h3>
+                    <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                        <div class="col-md-6 form-group p_star">
+                            <input type="text" class="form-control" id="first" name="name">
+                            <span class="placeholder" data-placeholder="First name"></span>
+                        </div>
+                        <div class="col-md-6 form-group p_star">
+                            <input type="text" class="form-control" id="last" name="name">
+                            <span class="placeholder" data-placeholder="Last name"></span>
+                        </div>
+                        <div class="col-md-6 form-group p_star">
+                            <input type="text" class="form-control" id="number" name="number">
+                            <span class="placeholder" data-placeholder="Phone number"></span>
+                        </div>
+                        <div class="col-md-6 form-group p_star">
+                            <input type="text" class="form-control" id="email" name="compemailany">
+                            <span class="placeholder" data-placeholder="Email"></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4">
+                    <div class="order_box">
+                        <h2>Your Order</h2>
+                        <ul class="list">
+                            <li>
+                                <a href="#">Product
+                                    <span>Total</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">{{product?.name}}
+                                    <span class="last">{{product?.price}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="list list_2">
+                            <li>
+                                <a href="#">Subtotal
+                                    <span>{{product?.price}}</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">Entrega
+                                    <span>Entrega Grátis (30 dias): $00.00</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">Total
+                                    <span>{{product?.price}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <a class="main_btn" [routerLink]="['/confirmation']">Finalizar Compra</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

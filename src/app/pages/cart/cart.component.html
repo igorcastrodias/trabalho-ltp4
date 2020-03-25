@@ -1,1 +1,107 @@
-<p>cart works!</p>
+<!--================Banner Area =================-->
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="container">
+            <div class="banner_content text-center">
+                <h2>Nova Coleção de Inverno</h2>
+                <div class="page_link">
+                    <a [routerLink]="['']">Home</a>
+                    <a [routerLink]="['/collection']">Carrinho</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================Banner Area =================-->
+
+
+<section class="cart_area">
+    <div class="container">
+        <div class="cart_inner">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Preço</th>
+                            <th></th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="media">
+                                    <div class="d-flex">
+                                        <img src="img/product/single-product/cart-1.jpg" alt="">
+                                    </div>
+                                    <div class="media-body">
+                                        <p>Minimalistic shop for multipurpose use</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <h5>$360.00</h5>
+                            </td>
+                            <td></td>
+                            <td>
+                                <h5>$720.00</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <h5>Subtotal</h5>
+                            </td>
+                            <td>
+                                <h5>$2160.00</h5>
+                            </td>
+                        </tr>
+                        <tr class="shipping_area">
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <h5>Entrega</h5>
+                            </td>
+                            <td>
+                                <div class="shipping_box">
+                                    <ul class="list">
+                                        <li class="active">
+                                            <a href="#">Entrega Grátis (30 dias)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="out_button_area">
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <div class="checkout_btn_inner">
+                                    <a class="gray_btn" [routerLink]="['/collection']">Continuar comprando</a>
+                                    <a class="main_btn" [routerLink]="['/checkout']">Ir para checkout</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
