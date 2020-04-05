@@ -13,6 +13,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SubscriptionComponent } from './components/subscription/subscription.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ContactComponent,
     LoginComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    SubscriptionComponent
   ],
   imports: [
     BrowserModule,
