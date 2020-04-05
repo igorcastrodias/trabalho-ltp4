@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ProductService} from '../../services/product/product.service';
+import {Product} from '../../services/product/product.model';
 
 @Component({
   selector: 'app-featured-products',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeaturedProductsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public productService: ProductService) { }
 
   ngOnInit(): void {
+    this.productService.getListFeaturedProducts();
   }
 
 }
