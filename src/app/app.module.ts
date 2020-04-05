@@ -14,6 +14,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SubscriptionComponent } from './components/subscription/subscription.component';
+import { FeaturedProductsComponent } from './components/featured-products/featured-products.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SubscriptionComponent } from './components/subscription/subscription.co
     LoginComponent,
     MenuComponent,
     FooterComponent,
-    SubscriptionComponent
+    SubscriptionComponent,
+    FeaturedProductsComponent
   ],
   imports: [
     BrowserModule,
