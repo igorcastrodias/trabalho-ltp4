@@ -12,6 +12,7 @@ import { ConfirmationComponent } from './pages/confirmation/confirmation.compone
 import { ContactComponent } from './pages/contact/contact.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MenuComponent } from './components/menu/menu.component';
     ConfirmationComponent,
     ContactComponent,
     LoginComponent,
-    MenuComponent
+    MenuComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
