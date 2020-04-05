@@ -24,4 +24,11 @@ export class ProductDetailComponent implements OnInit {
     this.productService.getProductById(this.numero).subscribe(product => this.product = product );
   }
 
+  addProduct(id:number){
+	  let existing = localStorage.getItem(name);
+	  let existingArray = existing ? existing.split(',') : [];
+	  existingArray.push(id.toString());
+	  localStorage.setItem(name, existingArray.toString());
+    this.router.navigate(['/checkout']);
+  }
 }
