@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SubscriptionComponent } from './components/subscription/subscription.component';
 import { FeaturedProductsComponent } from './components/featured-products/featured-products.component';
 import { BrowseCategoriesComponent } from './components/browse-categories/browse-categories.component';
+import { BrowseBrandsComponent } from './components/browse-brands/browse-brands.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BrowseCategoriesComponent } from './components/browse-categories/browse
     FooterComponent,
     SubscriptionComponent,
     FeaturedProductsComponent,
-    BrowseCategoriesComponent
+    BrowseCategoriesComponent,
+    BrowseBrandsComponent
   ],
   imports: [
     BrowserModule,
