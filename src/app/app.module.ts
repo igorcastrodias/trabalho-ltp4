@@ -11,6 +11,7 @@ import { CollectionComponent } from './pages/collection/collection.component';
 import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { LoginComponent } from './pages/login/login.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoginComponent } from './pages/login/login.component';
     CollectionComponent,
     ConfirmationComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
