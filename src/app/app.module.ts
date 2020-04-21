@@ -18,6 +18,7 @@ import { SubscriptionComponent } from './components/subscription/subscription.co
 import { FeaturedProductsComponent } from './components/featured-products/featured-products.component';
 import { BrowseCategoriesComponent } from './components/browse-categories/browse-categories.component';
 import { BrowseBrandsComponent } from './components/browse-brands/browse-brands.component';
+import { AllProductsComponent } from './components/all-products/all-products.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { BrowseBrandsComponent } from './components/browse-brands/browse-brands.
     SubscriptionComponent,
     FeaturedProductsComponent,
     BrowseCategoriesComponent,
-    BrowseBrandsComponent
+    BrowseBrandsComponent,
+    AllProductsComponent
   ],
   imports: [
     HttpClientModule,
