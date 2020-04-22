@@ -29,6 +29,6 @@ export class ProductDetailComponent implements OnInit {
 	  let existingArray = existing ? existing.split(',') : [];
 	  existingArray.push(id.toString());
 	  localStorage.setItem(name, existingArray.toString());
-    this.router.navigate(['/checkout']);
+    this.router.navigate(['/cart']);
   }
 }
