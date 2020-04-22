@@ -35,28 +35,5 @@ export class ProductService {
     console.log(this.http.get<Product>('http://localhost:3000/products/'+id));
     return this.http.get<Product>('http://localhost:3000/products/'+id);
   }
-
-  // addCategory(cat: Category) {
-  //   this.http.post<Category[]>('http://localhost:3000/category',cat).subscribe(
-  //     list =>{
-  //      this.getListCategory()
-  //     }
-  //   )
-  // }
-
-  // updateCategory(cat: Category) {
-  //   this.http.put<Category[]>('http://localhost:3000/category/'+cat.id,cat).subscribe(
-  //     list =>{
-  //      this.getListCategory()
-  //     }
-  //   )
-  // }
-
-  // deleteCategory(id: number) {
-  //   this.http.delete<Category>('http://localhost:3000/category/'+id).subscribe(
-  //     list =>{
-  //      this.getListCategory()
-  //     }
-  //   )
-  // }
+  
 }
