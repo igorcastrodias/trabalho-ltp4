@@ -1,1 +1,1 @@
-export const URL_RESTAPI = "http://localhost:3000"
+export const URL_RESTAPI :string = "http://localhost:3000"

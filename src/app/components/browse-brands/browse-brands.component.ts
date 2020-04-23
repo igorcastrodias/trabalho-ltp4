@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Brand } from '../../services/brand/brand.model';
+import { BrandService } from '../../services/brand/brand.service';
 
 @Component({
   selector: 'app-browse-brands',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BrowseBrandsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public brandService : BrandService) { }
 
   ngOnInit(): void {
+    this.brandService.getListBrands();
   }
 
 }

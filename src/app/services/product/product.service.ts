@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product } from './product.model';
 import { HttpClient } from '@angular/common/http';
+import {URL_RESTAPI} from '../../app.api'
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class ProductService {
 
   getListProducts() {
     
-    this.http.get<Product[]>('http://localhost:3000/products').subscribe(
+    this.http.get<Product[]>(URL_RESTAPI + '/products').subscribe(
       list =>{
         this.listProducts = list;
 
@@ -24,7 +25,7 @@ export class ProductService {
   }
 
   getListFeaturedProducts(){
-    this.http.get<Product[]>('http://localhost:3000/products?featured=Yes').subscribe(
+    this.http.get<Product[]>(URL_RESTAPI + '/products?featured=Yes').subscribe(
       list =>{
         this.listProducts = list;
       }
@@ -32,8 +33,7 @@ export class ProductService {
   }
 
   getProductById(id:number){
-    console.log(this.http.get<Product>('http://localhost:3000/products/'+id));
-    return this.http.get<Product>('http://localhost:3000/products/'+id);
+    return this.http.get<Product>(URL_RESTAPI + '/products/'+id);
   }
   
 }
