@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { CollectionComponent } from './pages/collection/collection.component';
@@ -19,12 +18,14 @@ import { FeaturedProductsComponent } from './components/featured-products/featur
 import { BrowseCategoriesComponent } from './components/browse-categories/browse-categories.component';
 import { BrowseBrandsComponent } from './components/browse-brands/browse-brands.component';
 import { AllProductsComponent } from './components/all-products/all-products.component';
+import { ProductComponent } from './pages/product/product.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ProductDetailComponent,
     CartComponent,
     CheckoutComponent,
     CollectionComponent,
@@ -37,7 +38,9 @@ import { AllProductsComponent } from './components/all-products/all-products.com
     FeaturedProductsComponent,
     BrowseCategoriesComponent,
     BrowseBrandsComponent,
-    AllProductsComponent
+    AllProductsComponent,
+    ProductDetailComponent,
+    ProductComponent
   ],
   imports: [
     HttpClientModule,
