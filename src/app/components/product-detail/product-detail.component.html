@@ -44,17 +44,15 @@
                     <h2>R${{product?.price}}</h2>
                     <ul class="list">
                         <li>
-                            <a class="active" href="#">
-                                <span>Categoria:</span> {{product?.category}}</a>
+                            <span>Categoria: {{product?.category}}</span> 
                         </li>
                         <li>
-                            <a href="#">
-                                <span>Disp.:</span> Em Estoque</a>
+                            <span>Disp.: Em Estoque</span> 
                         </li>
                     </ul>
                     <p>{{product?.description}}</p>
                     <div class="card_area">
-                        <a class="main_btn" (click)="addProduct(product?.id);">Adicionar ao Carrinho</a>
+                        <a class="main_btn" (click)="addProductToCart(product?.id);">Adicionar ao Carrinho</a>
                     </div>
                 </div>
             </div>

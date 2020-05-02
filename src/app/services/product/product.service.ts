@@ -25,11 +25,20 @@ export class ProductService {
   }
 
   getListProductsSortBy(column : string, asc : boolean) { 
-    let query : String = '_sort='+column+'&_order='+ (asc == true ? 'asc' : 'desc');
+    let query : string = '_sort='+column+'&_order='+ (asc == true ? 'asc' : 'desc');
     this.http.get<Product[]>(URL_RESTAPI + '/products?'+query).subscribe(
       list =>{
         this.listProducts = list;
 
+      }
+    )
+  }
+
+  getListProductsByCategory(category:string){
+    let query: string = 'category='+category;
+    this.http.get<Product[]>(URL_RESTAPI+"/products"+query).subscribe(
+      list => {
+        this.listProducts = list;
       }
     )
   }
