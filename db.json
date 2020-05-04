@@ -17,28 +17,6 @@
       "name":"Conjunto"
     }
   ],
-  "brands":[
-    {
-      "id":1,
-      "name":"Armani"
-    },
-    {
-      "id":2,
-      "name":"Chanel"
-    },
-    {
-      "id":3,
-      "name":"Dior"
-    },
-    {
-      "id":4,
-      "name":"Dolce & Gabbana"
-    },
-    {
-      "id":5,
-      "name":"Gucci"
-    }
-  ],
   "products": [
     {
       "id": 1,
@@ -47,7 +25,7 @@
       "fullDescription" : "Full Descrição Produto 1",
       "avaliable": "Yes",
       "price": 350.00,
-      "category" : "Calças",
+      "category" : "1",
       "featured": "Yes",
       "featuredImagePath": "/assets/img/product/feature-product/f-p-1.jpg",
       "smallImagePath":[
@@ -64,7 +42,7 @@
       "fullDescription" : "Full Descrição Produto 2",
       "avaliable": "Yes",
       "price": 50.00,
-      "category" : "Calças",
+      "category" : "2",
       "featured": "Yes",
       "featuredImagePath": "/assets/img/product/feature-product/f-p-2.jpg",
       "smallImagePath":[
@@ -81,7 +59,7 @@
       "fullDescription" : "Full Descrição Produto 3",
       "avaliable": "Yes",
       "price": 100.00,
-      "category" : "Calças",
+      "category" : "3",
       "featured": "Yes",
       "featuredImagePath": "/assets/img/product/feature-product/f-p-3.jpg",
       "smallImagePath":[

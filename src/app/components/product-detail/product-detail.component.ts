@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../../services/product/product.service';
-import { Product } from '../../services/product/product.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LocalStorageHelper } from 'src/app/helpers/localStorageHelper';
 import { Order } from 'src/app/services/order/order.model';
-
-
-
-
+import { Product } from 'src/app/services/product/product.model';
+import { ProductService } from 'src/app/services/product/product.service';
+import { CategoryService } from 'src/app/services/category/category.service';
+import { Category } from 'src/app/services/category/category.model';
 
 @Component({
   selector: 'app-product-detail',
@@ -16,14 +14,21 @@ import { Order } from 'src/app/services/order/order.model';
 })
 export class ProductDetailComponent implements OnInit {
 
-  constructor(private productService: ProductService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router, private productService: ProductService, private categoryService: CategoryService) { }
 
   product: Product
   numero: number
+  category: Category;
 
   ngOnInit(): void {
     this.numero = parseInt(this.route.snapshot.params['id']);
-    this.productService.getProductById(this.numero).subscribe(product => this.product = product );
+    this.productService.getProductById(this.numero).subscribe(product => {
+      this.product = product;
+      this.categoryService.getCategoryById(product.category).subscribe(category => {
+        this.category = category;
+      })
+    });
+    
   }
 
   addProductToCart(id:number){
@@ -66,4 +71,9 @@ export class ProductDetailComponent implements OnInit {
     order.quantity = 1;
     currentCart.push(order);
   }
+
+  public buscarNomeCategoria(idCategoria: number){
+    
+  }
+
 }

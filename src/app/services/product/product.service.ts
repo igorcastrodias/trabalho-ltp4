@@ -34,9 +34,9 @@ export class ProductService {
     )
   }
 
-  getListProductsByCategory(category:string){
-    let query: string = 'category='+category;
-    this.http.get<Product[]>(URL_RESTAPI+"/products"+query).subscribe(
+  getListProductsByCategory(idCategory:number){
+    let query: string = 'category='+idCategory;
+    this.http.get<Product[]>(URL_RESTAPI+"/products?"+query).subscribe(
       list => {
         this.listProducts = list;
       }

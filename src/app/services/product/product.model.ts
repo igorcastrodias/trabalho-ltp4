@@ -6,7 +6,7 @@ export class Product{
     fullDescription:string;
     avaliable:string;
     price:number;
-    category:string;
+    category:number;
     featured:string;
     featuredImagePath:string;
     smallImagePath:[];
@@ -19,7 +19,7 @@ export class Product{
         this.fullDescription = "";
         this.avaliable = "";
         this.price = 0;
-        this.category = "";
+        this.category = 0;
         this.featured = "";
         this.featuredImagePath = "";
         this.smallImagePath = [];

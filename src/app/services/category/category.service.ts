@@ -18,8 +18,12 @@ export class CategoryService {
     this.http.get<Category[]>(URL_RESTAPI + '/categories').subscribe(
       list =>{
         this.listCategories = list;
-
       }
     )
-  }  
+  }
+  
+  getCategoryById(idCategory: number){
+    return this.http.get<Category>(URL_RESTAPI + '/categories/'+idCategory);
+  }
+
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Category } from '../../services/category/category.model'
 import { CategoryService } from '../../services/category/category.service'
+import { ProductService } from 'src/app/services/product/product.service';
+
 
 @Component({
   selector: 'app-browse-categories',
@@ -9,10 +10,18 @@ import { CategoryService } from '../../services/category/category.service'
 })
 export class BrowseCategoriesComponent implements OnInit {
 
-  constructor(public categoryService : CategoryService) { }
+  constructor(public categoryService : CategoryService, private productService :  ProductService) { }
 
   ngOnInit(): void {
     this.categoryService.getListCategories()
+  }
+
+  filtrarPorCategoria(idCategoria: number){
+    if(idCategoria === 0 ){
+      this.productService.getListProducts();
+    }else{
+      this.productService.getListProductsByCategory(idCategoria);
+    }
   }
 
 }

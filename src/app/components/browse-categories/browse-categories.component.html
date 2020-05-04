@@ -5,8 +5,9 @@
     <div class="widgets_inner">
         <ul class="list">
             <li *ngFor="let categoryItem of categoryService.listCategories">
-                <a href="#{{categoryItem.id}}">{{categoryItem.name}}</a>
+                <a (click)="filtrarPorCategoria(categoryItem.id)" onclick="return false;" href="#">{{categoryItem.name}}</a>
             </li>
+            <li><a (click)="filtrarPorCategoria(0)" onclick="return false;" href="#">Todas</a></li>
         </ul>
     </div>
 </aside>
