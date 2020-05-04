@@ -1,10 +1,6 @@
 <app-menu></app-menu>
 <section class="checkout_area section_gap">
     <div class="container">
-        <div class="returning_customer">
-            <p>If you have shopped with us before, please enter your details in the boxes below. If you are a new customer, please proceed
-                to the Billing & Shipping section.</p>
-        </div>
         <div class="billing_details">
             <div class="row">
                 <div class="col-lg-8">
@@ -12,15 +8,15 @@
                     <form class="row contact_form" action="#" method="post" novalidate="novalidate">
                         <div class="col-md-6 form-group p_star">
                             <input type="text" class="form-control" id="first" name="name">
-                            <span class="placeholder" data-placeholder="First name"></span>
+                            <span class="placeholder" data-placeholder="Primeiro Nome"></span>
                         </div>
                         <div class="col-md-6 form-group p_star">
                             <input type="text" class="form-control" id="last" name="name">
-                            <span class="placeholder" data-placeholder="Last name"></span>
+                            <span class="placeholder" data-placeholder="Sobrenome"></span>
                         </div>
                         <div class="col-md-6 form-group p_star">
                             <input type="text" class="form-control" id="number" name="number">
-                            <span class="placeholder" data-placeholder="Phone number"></span>
+                            <span class="placeholder" data-placeholder="Telefone"></span>
                         </div>
                         <div class="col-md-6 form-group p_star">
                             <input type="text" class="form-control" id="email" name="compemailany">
@@ -33,12 +29,12 @@
                         <h2>Seu pedido</h2>
                         <ul class="list">
                             <li>
-                                <a href="#">Produto
+                                <a href="#">Produtos
                                     <span>Total</span>
                                 </a>
                             </li>
                             <li *ngFor="let item of this.currentCart">
-                                <a href="#"> {{item.name}}
+                                <a href="#"> {{item.name}} (x{{item.quantity}})
                                     <span class="last">R$ {{item.price}}</span>
                                 </a>
                             </li>
