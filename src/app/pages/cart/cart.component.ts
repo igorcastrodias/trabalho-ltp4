@@ -10,7 +10,6 @@ import { Order } from 'src/app/services/order/order.model';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-
   
   constructor(public productService : ProductService) { }
   currentCart : Order[] = [];

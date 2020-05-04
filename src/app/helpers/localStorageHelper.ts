@@ -7,4 +7,8 @@ export class LocalStorageHelper{
         let items = localStorage.getItem(chave);
         return items;
     }
+
+    static removeLocalStorage(chave:string){
+        localStorage.removeItem(chave);
+    }
 }

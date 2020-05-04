@@ -30,33 +30,33 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="order_box">
-                        <h2>Your Order</h2>
+                        <h2>Seu pedido</h2>
                         <ul class="list">
                             <li>
-                                <a href="#">Product
+                                <a href="#">Produto
                                     <span>Total</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#"> Nome Produto
-                                    <span class="last">Preço Produto</span>
+                            <li *ngFor="let item of this.currentCart">
+                                <a href="#"> {{item.name}}
+                                    <span class="last">R$ {{item.price}}</span>
                                 </a>
                             </li>
                         </ul>
                         <ul class="list list_2">
                             <li>
                                 <a href="#">Subtotal
-                                    <span>Subtotal</span>
+                                    <span>R$ {{this.subTotal}}</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">Entrega
-                                    <span>Entrega Grátis (30 dias): $00.00</span>
+                                    <span>Entrega Grátis (07 dias): R$ 00.00</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">Total
-                                    <span>R$100,00</span>
+                                    <span>R$ {{this.subTotal}}</span>
                                 </a>
                             </li>
                         </ul>
