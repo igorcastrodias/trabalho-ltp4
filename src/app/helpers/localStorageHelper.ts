@@ -1,14 +1,10 @@
 export class LocalStorageHelper{
     static addLocalStorage(chave:string, valor:string){
-        let existing = localStorage.getItem(chave);
-        let existingArray = existing ? existing.split(',') : [];
-        existingArray.push(valor);
-        localStorage.setItem(chave, existingArray.toString());
+        localStorage.setItem(chave, valor);
     }
 
     static getLocalStorage(chave:string){
-        let existing = localStorage.getItem(chave);
-        let existingArray = existing ? existing.split(',') : [];
-        return existingArray;
+        let items = localStorage.getItem(chave);
+        return items;
     }
 }

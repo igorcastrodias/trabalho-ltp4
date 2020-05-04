@@ -42,7 +42,7 @@
   "products": [
     {
       "id": 1,
-      "name": "CALÇA MOM JEANS COM PUÍDOS 1",
+      "name": "CALÇA JEANS BONITINHA",
       "description": "Descrição Produto 1",
       "fullDescription" : "Full Descrição Produto 1",
       "avaliable": "Yes",
@@ -59,7 +59,7 @@
     },
     {
       "id": 2,
-      "name": "CALÇA MOM JEANS COM PUÍDOS 2",
+      "name": "CONJUNTO SAIA BONITINHA",
       "description": "Descrição Produto 2",
       "fullDescription" : "Full Descrição Produto 2",
       "avaliable": "Yes",
@@ -76,7 +76,7 @@
     },
     {
       "id": 3,
-      "name": "CALÇA MOM JEANS COM PUÍDOS 3",
+      "name": "BLUSA BONITINHA",
       "description": "Descrição Produto 3",
       "fullDescription" : "Full Descrição Produto 3",
       "avaliable": "Yes",

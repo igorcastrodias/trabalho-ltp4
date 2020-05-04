@@ -54,5 +54,20 @@ export class ProductService {
   getProductById(id:number){
     return this.http.get<Product>(URL_RESTAPI + '/products/'+id);
   }
+
+  getProductsByIds(ids:string[]){
+    var query : string = 'id='+ids[0];
+    if(ids.length > 1){
+      for (let index = 1; index < ids.length; index++){
+        query += '&id='+ids[index];
+      }
+      
+    }
+    this.http.get<Product[]>(URL_RESTAPI + '/products?'+query).subscribe(
+      list =>{
+        this.listProducts = list;
+      }
+    )
+  }
   
 }
