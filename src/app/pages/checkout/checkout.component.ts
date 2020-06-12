@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { LocalStorageHelper } from 'src/app/helpers/localStorageHelper';
 import { ProductService } from 'src/app/services/product/product.service';
+import { Cart } from 'src/app/services/cart/cart.model';
 import { Order } from 'src/app/services/order/order.model';
+import { OrderService } from 'src/app/services/order/order.service';
+
 
 @Component({
   selector: 'app-checkout',
@@ -10,9 +14,17 @@ import { Order } from 'src/app/services/order/order.model';
 })
 export class CheckoutComponent implements OnInit {
 
-  constructor(public productService : ProductService) { }
-  currentCart : Order[] = [];
+  constructor(public productService : ProductService, private orderSerivce: OrderService, private fb: FormBuilder) { }
+
+  currentCart : Cart[] = [];
   subTotal : number = 0;
+
+  checkoutForm = this.fb.group({
+    firstName: ['Primeiro Nome',Validators.required],
+    lastName: ['Último Nome',Validators.required],
+    phoneNumber: ['Telefone Celular',Validators.required],
+    email: ['Email',Validators.required]
+  });
 
 
   ngOnInit(): void {
@@ -23,6 +35,24 @@ export class CheckoutComponent implements OnInit {
         this.subTotal += (element.price * element.quantity)
       });
     }
+  }
+
+  onSubmit() {
+    if(this.checkoutForm.valid){
+      var order : Order;
+
+      order = new Order(this.checkoutForm.value)
+      order.id = 23340;
+      order.cart = this.currentCart;
+      order.date = new Date().toISOString();
+      order.total = this.subTotal;
+      console.log(order);
+      this.orderSerivce.createOrder(order).subscribe(arg => console.log(arg));
+
+    }else{
+     alert("Favor preencher os campos corretamente");
+    }
+    
   }
 
 }

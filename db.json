@@ -1,20 +1,56 @@
 {
-  "categories":[
+  "orders": [
     {
-      "id":1,
-      "name":"Calças"
+      "id": 1,
+      "cart": [
+        {
+          "idProduct": 3,
+          "name": "BLUSA BONITINHA",
+          "price": 100,
+          "quantity": 1
+        }
+      ],
+      "firstName": "sdfd",
+      "lastName": "dfdg",
+      "phoneNumber": "fdgfdg",
+      "email": "dfgdfg",
+      "date": "2020-06-11T23:49:44.858Z",
+      "total": 100
     },
     {
-      "id":2,
-      "name":"Vestidos"
+      "firstName": "sdfsdfdsfome",
+      "lastName": "sdfdsfdsffltidms",
+      "phoneNumber": "3454354355",
+      "email": "dsfsdgfdgfhrrtgerdf",
+      "id": 23340,
+      "cart": [
+        {
+          "idProduct": 3,
+          "name": "BLUSA BONITINHA",
+          "price": 100,
+          "quantity": 1
+        }
+      ],
+      "date": "2020-06-12T00:24:37.603Z",
+      "total": 100
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Calças"
     },
     {
-      "id":3,
-      "name":"Blusas"
+      "id": 2,
+      "name": "Vestidos"
     },
     {
-      "id":4,
-      "name":"Conjunto"
+      "id": 3,
+      "name": "Blusas"
+    },
+    {
+      "id": 4,
+      "name": "Conjunto"
     }
   ],
   "products": [
@@ -22,13 +58,13 @@
       "id": 1,
       "name": "CALÇA JEANS BONITINHA",
       "description": "Descrição Produto 1",
-      "fullDescription" : "Full Descrição Produto 1",
+      "fullDescription": "Full Descrição Produto 1",
       "avaliable": "Yes",
-      "price": 350.00,
-      "category" : "1",
+      "price": 350,
+      "category": "1",
       "featured": "Yes",
       "featuredImagePath": "/assets/img/product/feature-product/f-p-1.jpg",
-      "smallImagePath":[
+      "smallImagePath": [
         "assets/img/product/s-product-1.jpg",
         "assets/img/product/s-product-s-2.jpg",
         "assets/img/product/s-product-s-3.jpg",
@@ -39,13 +75,13 @@
       "id": 2,
       "name": "CONJUNTO SAIA BONITINHA",
       "description": "Descrição Produto 2",
-      "fullDescription" : "Full Descrição Produto 2",
+      "fullDescription": "Full Descrição Produto 2",
       "avaliable": "Yes",
-      "price": 50.00,
-      "category" : "2",
+      "price": 50,
+      "category": "2",
       "featured": "Yes",
       "featuredImagePath": "/assets/img/product/feature-product/f-p-2.jpg",
-      "smallImagePath":[
+      "smallImagePath": [
         "assets/img/product/s-product-1.jpg",
         "assets/img/product/s-product-s-2.jpg",
         "assets/img/product/s-product-s-3.jpg",
@@ -56,13 +92,13 @@
       "id": 3,
       "name": "BLUSA BONITINHA",
       "description": "Descrição Produto 3",
-      "fullDescription" : "Full Descrição Produto 3",
+      "fullDescription": "Full Descrição Produto 3",
       "avaliable": "Yes",
-      "price": 100.00,
-      "category" : "3",
+      "price": 100,
+      "category": "3",
       "featured": "Yes",
       "featuredImagePath": "/assets/img/product/feature-product/f-p-3.jpg",
-      "smallImagePath":[
+      "smallImagePath": [
         "assets/img/product/s-product-1.jpg",
         "assets/img/product/s-product-s-2.jpg",
         "assets/img/product/s-product-s-3.jpg",

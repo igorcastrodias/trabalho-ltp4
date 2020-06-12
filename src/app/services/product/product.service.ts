@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Product } from './product.model';
 import { HttpClient } from '@angular/common/http';
 import {URL_RESTAPI} from '../../app.api'
-import { stringify } from 'querystring';
 
 @Injectable({
   providedIn: 'root'

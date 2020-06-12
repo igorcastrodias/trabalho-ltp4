@@ -5,23 +5,20 @@
             <div class="row">
                 <div class="col-lg-8">
                     <h3>Dados da Entrega</h3>
-                    <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                    <form class="row contact_form" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="first" name="name">
-                            <span class="placeholder" data-placeholder="Primeiro Nome"></span>
+                           <input type="text" class="form-control" id="first" name="name" formControlName="firstName">
                         </div>
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="last" name="name">
-                            <span class="placeholder" data-placeholder="Sobrenome"></span>
+                            <input type="text" class="form-control" id="last" name="name" formControlName="lastName">
                         </div>
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="number" name="number">
-                            <span class="placeholder" data-placeholder="Telefone"></span>
+                            <input type="text" class="form-control" id="number" name="number" formControlName="phoneNumber">
                         </div>
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="email" name="compemailany">
-                            <span class="placeholder" data-placeholder="Email"></span>
+                            <input type="text" class="form-control" id="email" name="compemailany" formControlName="email">
                         </div>
+                       <input class="main_btn" type="submit" value="Finalizar Compra" [disabled]="!checkoutForm.valid" />
                     </form>
                 </div>
                 <div class="col-lg-4">
@@ -56,7 +53,6 @@
                                 </a>
                             </li>
                         </ul>
-                        <a class="main_btn" [routerLink]="['/confirmation']">Finalizar Compra</a>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalStorageHelper } from 'src/app/helpers/localStorageHelper';
 import { ProductService } from 'src/app/services/product/product.service';
-import { Order } from 'src/app/services/order/order.model';
+import { Cart } from 'src/app/services/cart/cart.model';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { Order } from 'src/app/services/order/order.model';
 export class CartComponent implements OnInit {
   
   constructor(public productService : ProductService) { }
-  currentCart : Order[] = [];
+  currentCart : Cart[] = [];
   subTotal : number = 0;
 
   ngOnInit(): void {
@@ -25,7 +25,4 @@ export class CartComponent implements OnInit {
       });
     }
   }
-
-
-
 }

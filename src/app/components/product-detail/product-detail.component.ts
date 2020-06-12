@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LocalStorageHelper } from 'src/app/helpers/localStorageHelper';
-import { Order } from 'src/app/services/order/order.model';
+import { Cart } from 'src/app/services/cart/cart.model';
 import { Product } from 'src/app/services/product/product.model';
 import { ProductService } from 'src/app/services/product/product.service';
 import { CategoryService } from 'src/app/services/category/category.service';
@@ -33,7 +33,7 @@ export class ProductDetailComponent implements OnInit {
 
   addProductToCart(id:number){
     /* To Do - Criar metodo para guardar itens no carrinho  */
-    var currentCart : Order[] = [];
+    var currentCart : Cart[] = [];
     let currentCartStorage = LocalStorageHelper.getLocalStorage("itemsOfCart");
     
     if(currentCartStorage != null){
@@ -57,23 +57,17 @@ export class ProductDetailComponent implements OnInit {
       this.adicionarItemCarrinho(currentCart);
     }
 
-    console.log(JSON.stringify(currentCart));
-
     LocalStorageHelper.addLocalStorage("itemsOfCart",JSON.stringify(currentCart));
     this.router.navigate(['/cart']);
   }
 
-  private adicionarItemCarrinho(currentCart: Order[]) {
-    var order: Order = new Order();
+  private adicionarItemCarrinho(currentCart: Cart[]) {
+    var order: Cart = new Cart();
     order.idProduct = this.product.id;
     order.name = this.product.name;
     order.price = this.product.price;
     order.quantity = 1;
     currentCart.push(order);
-  }
-
-  public buscarNomeCategoria(idCategoria: number){
-    
   }
 
 }

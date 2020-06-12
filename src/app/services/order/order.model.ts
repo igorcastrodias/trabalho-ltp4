@@ -1,24 +1,18 @@
+import { Cart } from '../cart/cart.model';
+
 export class Order{
-    idProduct:number;
-    name: string;
-    price: number;
-    quantity: number;
-    firstNam: string;
-    lastName: string;
-    email: string;
-    phoneNumber: string;
-    total: number;
+    id: Number;
+    cart : Cart[];
+    firstName: String;
+    lastName: String;
+    phoneNumber: String;
+    email: String;
+    total: Number;
+    date: String;
 
-
-    constructor(){
-        this.idProduct = 0;
-        this.name = "";
-        this.price = 0;
-        this.quantity = 0;
-        this.firstNam = "";
-        this.lastName = "";
-        this.email = "";
-        this.phoneNumber = "";
-        this.total = 0;
+    constructor(init?: Partial<Order>) {
+        Object.assign(this, init);
     }
+
+
 }
