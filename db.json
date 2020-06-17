@@ -1,4 +1,10 @@
 {
+  "logins": [
+    {
+      "email": "admin@admin.com",
+      "password": "1234"
+    }
+  ],
   "orders": [
     {
       "id": 1,

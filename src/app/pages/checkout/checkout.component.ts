@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { LocalStorageHelper } from 'src/app/helpers/localStorageHelper';
 import { ProductService } from 'src/app/services/product/product.service';
 import { Cart } from 'src/app/services/cart/cart.model';
@@ -40,7 +40,6 @@ export class CheckoutComponent implements OnInit {
   onSubmit() {
     if(this.checkoutForm.valid){
       var order : Order;
-
       order = new Order(this.checkoutForm.value)
       order.id = null;
       order.cart = this.currentCart;
@@ -50,7 +49,7 @@ export class CheckoutComponent implements OnInit {
       this.orderSerivce.createOrder(order).subscribe(arg => console.log(arg));
 
     }else{
-     alert("Favor preencher os campos corretamente");
+      alert("Favor preencher os campos corretamente");
     }
     
   }

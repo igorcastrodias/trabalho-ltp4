@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthGuard } from "./guard/authguard";
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -21,6 +22,7 @@ import { BrowseBrandsComponent } from './components/browse-brands/browse-brands.
 import { AllProductsComponent } from './components/all-products/all-products.component';
 import { ProductComponent } from './pages/product/product.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { AdminHomeComponent } from './pages/admin/admin-home/admin-home.component';
 
 
 @NgModule({
@@ -41,7 +43,8 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     BrowseBrandsComponent,
     AllProductsComponent,
     ProductDetailComponent,
-    ProductComponent
+    ProductComponent,
+    AdminHomeComponent
   ],
   imports: [
     HttpClientModule,
@@ -50,7 +53,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
