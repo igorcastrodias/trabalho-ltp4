@@ -42,7 +42,7 @@ export class CheckoutComponent implements OnInit {
       var order : Order;
 
       order = new Order(this.checkoutForm.value)
-      order.id = 23340;
+      order.id = null;
       order.cart = this.currentCart;
       order.date = new Date().toISOString();
       order.total = this.subTotal;
