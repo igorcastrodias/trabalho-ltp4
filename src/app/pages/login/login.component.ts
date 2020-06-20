@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     var login : Login = this.loginForm.value;
     this.authService.authenticate(login).subscribe(data => {
       if(data.length > 0 && data[0].password == login.password){
-          LocalStorageHelper.addLocalStorage("user",data[0].email);
+          LocalStorageHelper.addLocalStorage("user", JSON.stringify(new Login(data[0].nome, data[0].email)));
           this.router.navigate(['/admin']);
       }else{
         alert("Usuário ou senha incorretos!!");
