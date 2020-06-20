@@ -25,6 +25,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { AdminHomeComponent } from './pages/admin/admin-home/admin-home.component';
 import { AdminSidebarLeftComponent } from './components/admin/admin-sidebar-left/admin-sidebar-left.component';
 import { AdminFooterComponent } from './components/admin/admin-footer/admin-footer.component';
+import { AdminPanelsComponent } from './components/admin/admin-panels/admin-panels.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { AdminFooterComponent } from './components/admin/admin-footer/admin-foot
     ProductComponent,
     AdminHomeComponent,
     AdminSidebarLeftComponent,
-    AdminFooterComponent
+    AdminFooterComponent,
+    AdminPanelsComponent
   ],
   imports: [
     HttpClientModule,

@@ -55,7 +55,6 @@
               "src/assets/js/mail-script.js",
               "src/assets/vendors/jquery-ui/jquery-ui.js",
               "src/assets/js/theme.js",
-              "src/assets/js/gmaps.min.js",
               "src/assets/plugin/bootstrap/js/bootstrap.bundle.min.js",
               "src/assets/plugin/fastclick/fastclick.js",
               "src/assets/js/adminlte.min.js"
