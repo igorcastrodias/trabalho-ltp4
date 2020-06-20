@@ -29,6 +29,7 @@ import { AdminFooterComponent } from './components/admin/admin-footer/admin-foot
 import { AdminPanelsComponent } from './components/admin/admin-panels/admin-panels.component';
 import { AdminBarGraphComponent } from './components/admin/admin-bar-graph/admin-bar-graph.component';
 import { AdminPieGraphComponent } from './components/admin/admin-pie-graph/admin-pie-graph.component';
+import { AdminLineGraphComponent } from './components/admin/admin-line-graph/admin-line-graph.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { AdminPieGraphComponent } from './components/admin/admin-pie-graph/admin
     AdminFooterComponent,
     AdminPanelsComponent,
     AdminBarGraphComponent,
-    AdminPieGraphComponent
+    AdminPieGraphComponent,
+    AdminLineGraphComponent
   ],
   imports: [
     HttpClientModule,

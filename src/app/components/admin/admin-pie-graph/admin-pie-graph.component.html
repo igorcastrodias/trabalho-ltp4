@@ -1,1 +1,14 @@
-<p>admin-pie-graph works!</p>
+<div class="card">
+    <div class="card-header">
+      <h3 class="card-title">
+        <i class="fas fa-chart-pie mr-1"></i>
+        Vendas x Categoria
+      </h3>
+    </div>
+    <div class="card-body">
+      <canvas baseChart
+      [data]="doughnutChartData"
+      [labels]="doughnutChartLabels"
+      [chartType]="doughnutChartType"></canvas>
+    </div>
+  </div>

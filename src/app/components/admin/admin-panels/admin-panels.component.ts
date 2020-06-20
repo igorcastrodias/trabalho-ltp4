@@ -28,7 +28,7 @@ export class AdminPanelsComponent implements OnInit {
     item.name = 'Total de Usuários Online',
     item.count = quantiUsersOnline.toString(),
     item.icon = 'ion ion-pie-graph',
-    item.color = 'small-box bg-danger',
+    item.color = 'small-box bg-light',
     this.paineis.push(item);
 
 
