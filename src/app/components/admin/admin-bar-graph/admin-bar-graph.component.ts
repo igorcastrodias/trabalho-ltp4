@@ -38,7 +38,6 @@ export class AdminBarGraphComponent implements OnInit {
           vendasMeses.Add(monthName,quantidadeAtual);
         }
       });
-      console.log(vendasMeses.Keys());
       this.barChartLabels = vendasMeses.Keys();
       this.barChartData =  [{data: vendasMeses.Values(), label: 'Vendas'}];
     });
