@@ -23,6 +23,8 @@ import { AllProductsComponent } from './components/all-products/all-products.com
 import { ProductComponent } from './pages/product/product.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { AdminHomeComponent } from './pages/admin/admin-home/admin-home.component';
+import { AdminSidebarLeftComponent } from './components/admin/admin-sidebar-left/admin-sidebar-left.component';
+import { AdminFooterComponent } from './components/admin/admin-footer/admin-footer.component';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { AdminHomeComponent } from './pages/admin/admin-home/admin-home.componen
     AllProductsComponent,
     ProductDetailComponent,
     ProductComponent,
-    AdminHomeComponent
+    AdminHomeComponent,
+    AdminSidebarLeftComponent,
+    AdminFooterComponent
   ],
   imports: [
     HttpClientModule,

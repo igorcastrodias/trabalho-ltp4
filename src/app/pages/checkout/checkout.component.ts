@@ -5,6 +5,7 @@ import { ProductService } from 'src/app/services/product/product.service';
 import { Cart } from 'src/app/services/cart/cart.model';
 import { Order } from 'src/app/services/order/order.model';
 import { OrderService } from 'src/app/services/order/order.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { OrderService } from 'src/app/services/order/order.service';
 })
 export class CheckoutComponent implements OnInit {
 
-  constructor(public productService : ProductService, private orderSerivce: OrderService, private fb: FormBuilder) { }
+  constructor(public productService : ProductService, private orderSerivce: OrderService, private fb: FormBuilder, private router: Router) { }
 
   currentCart : Cart[] = [];
   subTotal : number = 0;
@@ -45,8 +46,9 @@ export class CheckoutComponent implements OnInit {
       order.cart = this.currentCart;
       order.date = new Date().toISOString();
       order.total = this.subTotal;
-      console.log(order);
-      this.orderSerivce.createOrder(order).subscribe(arg => console.log(arg));
+      this.orderSerivce.createOrder(order).subscribe(arg => {
+        this.router.navigate(['/confirmation']);
+      });
 
     }else{
       alert("Favor preencher os campos corretamente");

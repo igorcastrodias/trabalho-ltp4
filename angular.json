@@ -25,6 +25,8 @@
             ],
             "styles": [
               "src/styles.css",
+              "src/assets/plugin/fontawesome-free/css/all.min.css",
+              "src/assets/css/adminlte.min.css",
               "src/assets/css/bootstrap.css",
               "src/assets/vendors/linericon/style.css",
               "src/assets/css/font-awesome.min.css",
@@ -33,8 +35,8 @@
               "src/assets/vendors/nice-select/css/nice-select.css",
               "src/assets/vendors/animate-css/animate.css",
               "src/assets/vendors/jquery-ui/jquery-ui.css",
-              "src/assets/css/style.css",
-              "src/assets/css/responsive.css"
+              "src/assets/css/responsive.css",
+              "src/assets/css/style.css"
             ],
             "scripts": [
               "src/assets/js/jquery-3.2.1.min.js",
@@ -53,7 +55,10 @@
               "src/assets/js/mail-script.js",
               "src/assets/vendors/jquery-ui/jquery-ui.js",
               "src/assets/js/theme.js",
-              "src/assets/js/gmaps.min.js"
+              "src/assets/js/gmaps.min.js",
+              "src/assets/plugin/bootstrap/js/bootstrap.bundle.min.js",
+              "src/assets/plugin/fastclick/fastclick.js",
+              "src/assets/js/adminlte.min.js"
             ]
           },
           "configurations": {
