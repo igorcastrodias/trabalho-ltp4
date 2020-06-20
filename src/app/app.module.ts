@@ -30,6 +30,9 @@ import { AdminPanelsComponent } from './components/admin/admin-panels/admin-pane
 import { AdminBarGraphComponent } from './components/admin/admin-bar-graph/admin-bar-graph.component';
 import { AdminPieGraphComponent } from './components/admin/admin-pie-graph/admin-pie-graph.component';
 import { AdminLineGraphComponent } from './components/admin/admin-line-graph/admin-line-graph.component';
+import { AdminCategoryComponent } from './components/admin/admin-category/admin-category.component';
+import { AdminProductComponent } from './components/admin/admin-product/admin-product.component';
+import { AdminPageCategoryComponent } from './pages/admin/admin-page-category/admin-page-category.component';
 
 
 @NgModule({
@@ -57,7 +60,10 @@ import { AdminLineGraphComponent } from './components/admin/admin-line-graph/adm
     AdminPanelsComponent,
     AdminBarGraphComponent,
     AdminPieGraphComponent,
-    AdminLineGraphComponent
+    AdminLineGraphComponent,
+    AdminCategoryComponent,
+    AdminProductComponent,
+    AdminPageCategoryComponent
   ],
   imports: [
     HttpClientModule,

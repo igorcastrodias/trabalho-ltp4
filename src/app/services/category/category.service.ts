@@ -26,4 +26,28 @@ export class CategoryService {
     return this.http.get<Category>(URL_RESTAPI + '/categories/'+idCategory);
   }
 
+  addCategory(cat: Category) {
+    this.http.post<Category[]>(URL_RESTAPI + '/categories',cat).subscribe(
+      list =>{
+       this.getListCategories()
+      }
+    )
+  }
+
+  updateCategory(cat: Category) {
+    this.http.put<Category[]>(URL_RESTAPI + '/categories/'+cat.id,cat).subscribe(
+      list =>{
+       this.getListCategories()
+      }
+    )
+  }
+
+  deleteCategory(id: number) {
+    this.http.delete<Category>(URL_RESTAPI + '/categories/'+id).subscribe(
+      list =>{
+       this.getListCategories()
+      }
+    )
+  }
+
 }
