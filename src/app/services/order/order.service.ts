@@ -17,4 +17,8 @@ export class OrderService {
       return this.http.post<Order>(URL_RESTAPI + '/orders',order);
   }
 
+  getOrdersLength(){
+    return this.http.get<Order[]>(URL_RESTAPI + '/orders');
+  }
+
 }

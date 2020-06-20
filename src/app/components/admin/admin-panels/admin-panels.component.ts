@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/services/product/product.service';
+import { Panels } from 'src/app/services/panels/panel.model';
+import { OrderService } from 'src/app/services/order/order.service';
+import { Dictionary } from 'src/app/helpers/dictionaryHelper';
 
 @Component({
   selector: 'app-admin-panels',
@@ -7,44 +11,65 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminPanelsComponent implements OnInit {
 
-  paineis = [
-    {
-      name:'Vendas de Hoje',
-      count:120,
-      icon: 'ion ion-bag',
-      color:'small-box bg-info',
-      link:'/categorias',
-      linkName:'Relatórios'
-    },
-    {
-      name:'Aumento Vendas',
-      count:47+'%',
-      icon: 'ion ion-stats-bars',
-      color:'small-box bg-success',
-      link:'/categorias',
-      linkName:'Relatórios'
-    },
-    {
-      name:'Total Clientes',
-      count:39,
-      icon: 'ion ion-person-add',
-      color:'small-box bg-warning',
-      link:'/categorias',
-      linkName:'Lista Clientes'
-    },
-    {
-      name:'Clientes Recorrentes',
-      count:7,
-      icon: 'ion ion-pie-graph',
-      color:'small-box bg-danger',
-      link:'/categorias',
-      linkName:'Vendas'
-    }];
+  paineis : Panels[] = [];
 
-
-  constructor() { }
+    
+  constructor(private productsService: ProductService, private ordersService: OrderService) { 
+    this.productsService.getListProducts();
+  }
 
   ngOnInit(): void {
+
+    this.getProductsLength();
+    this.getOrdersLength();
+
+    var quantiUsersOnline = Math.floor(Math.random() * (100 - 1) + 1);
+    var item = new Panels();
+    item.name = 'Total de Usuários Online',
+    item.count = quantiUsersOnline.toString(),
+    item.icon = 'ion ion-pie-graph',
+    item.color = 'small-box bg-light',
+    this.paineis.push(item);
+
+
+ 
+  }
+
+  getProductsLength(){
+    this.productsService.getProdutcsLength().subscribe( items => {
+      var item = new Panels();
+      item.name = 'Total de Produtos',
+      item.count = items.length.toString(),
+      item.icon = 'ion ion-bag',
+      item.color = 'small-box bg-info',
+      this.paineis.push(item);
+    });
+  }
+
+  getOrdersLength(){
+    this.ordersService.getOrdersLength().subscribe( items => {
+      var itemOrderLength = new Panels();
+      itemOrderLength.name = 'Total de Vendas',
+      itemOrderLength.count = items.length.toString(),
+      itemOrderLength.icon = 'ion ion-stats-bars',
+      itemOrderLength.color = 'small-box bg-success',
+      this.paineis.push(itemOrderLength);
+
+      var clientesDistinct = new Dictionary<Number>();
+      items.forEach(element => {
+        if(!clientesDistinct.ContainsKey(element.email.toString())){
+          clientesDistinct.Add(element.email.toString(),1)
+        }
+      });
+
+      var itemClientsLength = new Panels();
+      itemClientsLength.name = 'Total de Clientes',
+      itemClientsLength.count = clientesDistinct.Count().toString(),
+      itemClientsLength.icon = 'ion ion-person-add',
+      itemClientsLength.color = 'small-box bg-warning',
+      this.paineis.push(itemClientsLength);
+
+    });
   }
 
 }

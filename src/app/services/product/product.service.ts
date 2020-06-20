@@ -68,5 +68,8 @@ export class ProductService {
       }
     )
   }
-  
+
+  getProdutcsLength(){
+    return this.http.get<Product[]>(URL_RESTAPI + '/products');
+  }
 }
