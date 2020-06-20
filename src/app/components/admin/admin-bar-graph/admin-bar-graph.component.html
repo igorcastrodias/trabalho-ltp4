@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">
+        <i class="fas fa-chart-bar mr-1"></i>
+            Vendas X Mês
+        </h3>
+    </div>
+    <div class="card-body">
+        <div class="tab-content p-0">
+        <div class="chart tab-pane active">
+            <canvas baseChart
+            [colors]="colors"
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"></canvas>
+            </div>
+        </div>
+    </div>
+</div>

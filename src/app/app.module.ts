@@ -27,6 +27,8 @@ import { AdminHomeComponent } from './pages/admin/admin-home/admin-home.componen
 import { AdminSidebarLeftComponent } from './components/admin/admin-sidebar-left/admin-sidebar-left.component';
 import { AdminFooterComponent } from './components/admin/admin-footer/admin-footer.component';
 import { AdminPanelsComponent } from './components/admin/admin-panels/admin-panels.component';
+import { AdminBarGraphComponent } from './components/admin/admin-bar-graph/admin-bar-graph.component';
+import { AdminPieGraphComponent } from './components/admin/admin-pie-graph/admin-pie-graph.component';
 
 
 @NgModule({
@@ -51,7 +53,9 @@ import { AdminPanelsComponent } from './components/admin/admin-panels/admin-pane
     AdminHomeComponent,
     AdminSidebarLeftComponent,
     AdminFooterComponent,
-    AdminPanelsComponent
+    AdminPanelsComponent,
+    AdminBarGraphComponent,
+    AdminPieGraphComponent
   ],
   imports: [
     HttpClientModule,

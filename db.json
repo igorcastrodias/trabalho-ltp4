@@ -21,7 +21,7 @@
       "lastName": "dfdg",
       "phoneNumber": "fdgfdg",
       "email": "dfgdfg",
-      "date": "2020-06-11T23:49:44.858Z",
+      "date": "2020-05-11T23:49:44.858Z",
       "total": 100
     },
     {
@@ -39,6 +39,23 @@
         }
       ],
       "date": "2020-06-12T00:24:37.603Z",
+      "total": 100
+    },
+    {
+      "firstName": "sdfsdfSDFDSFdsfome",
+      "lastName": "sdfdsfDFGFDGFGsffltidms",
+      "phoneNumber": "3454354355",
+      "email": "dsfsdgfdgSDFSDFDSFGfhrrtgerdf",
+      "id": 23350,
+      "cart": [
+        {
+          "idProduct": 3,
+          "name": "BLUSA BONITINHA",
+          "price": 100,
+          "quantity": 1
+        }
+      ],
+      "date": "2020-07-12T00:24:37.603Z",
       "total": 100
     }
   ],
