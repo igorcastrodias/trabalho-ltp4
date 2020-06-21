@@ -16,7 +16,7 @@ export class AdminLineGraphComponent implements OnInit {
     responsive: true
   };
 
-  colors = [{  backgroundColor: 'rgb(255,127,80)' }];
+  colors = [{  backgroundColor: 'rgb(255,182,193)' }];
   public barChartLabels = [];
   public barChartType = 'line';
   public barChartLegend = false;
