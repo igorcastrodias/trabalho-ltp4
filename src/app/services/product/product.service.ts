@@ -2,13 +2,17 @@ import { Injectable } from '@angular/core';
 import { Product } from './product.model';
 import { HttpClient } from '@angular/common/http';
 import {URL_RESTAPI} from '../../app.api'
+import { Category } from '../category/category.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
+
   public listProducts: Product[] = []
+  public productSeleted: Product = new Product();
+  public categorySelected: Category;
 
   constructor(public http: HttpClient) {   
       this.getListProducts()   
@@ -71,5 +75,24 @@ export class ProductService {
 
   getProdutcsLength(){
     return this.http.get<Product[]>(URL_RESTAPI + '/products');
+  }
+
+  updateProduct() {
+    throw new Error("Method not implemented.");
+  }
+  addProduct() {
+    throw new Error("Method not implemented.");
+  }
+
+  deleteProduct(id: number) {
+    throw new Error("Method not implemented.");
+  }
+
+  setProduct(p: Product) {
+    this.productSeleted = p;
+  }
+
+  newProduct() {
+    this.productSeleted = new Product();
   }
 }

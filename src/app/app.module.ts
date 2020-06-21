@@ -33,6 +33,7 @@ import { AdminLineGraphComponent } from './components/admin/admin-line-graph/adm
 import { AdminCategoryComponent } from './components/admin/admin-category/admin-category.component';
 import { AdminProductComponent } from './components/admin/admin-product/admin-product.component';
 import { AdminPageCategoryComponent } from './pages/admin/admin-page-category/admin-page-category.component';
+import { AdminPageProductComponent } from './pages/admin/admin-page-product/admin-page-product.component';
 
 
 @NgModule({
@@ -63,7 +64,8 @@ import { AdminPageCategoryComponent } from './pages/admin/admin-page-category/ad
     AdminLineGraphComponent,
     AdminCategoryComponent,
     AdminProductComponent,
-    AdminPageCategoryComponent
+    AdminPageCategoryComponent,
+    AdminPageProductComponent
   ],
   imports: [
     HttpClientModule,

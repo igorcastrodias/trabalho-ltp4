@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/services/product/product.service';
+import { CategoryService } from 'src/app/services/category/category.service';
 
 @Component({
   selector: 'app-admin-product',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminProductComponent implements OnInit {
 
-  constructor() { }
+  constructor(public productService: ProductService,
+    public categoryService: CategoryService) { }
 
   ngOnInit(): void {
+  }
+
+  changeCategory() {   
+    this.productService.getListProductsByCategory(this.productService.categorySelected.id);
+  }
+
+  save(){
+    if (this.productService.productSeleted.id == 0) {
+      this.productService.addProduct();
+    }else{
+      this.productService.updateProduct()
+    }
   }
 
 }

@@ -12,6 +12,7 @@ import { LoginComponent } from './pages/login/login.component'
 import { AdminHomeComponent } from './pages/admin/admin-home/admin-home.component';
 import { AdminPageCategoryComponent } from './pages/admin/admin-page-category/admin-page-category.component';
 import { AuthGuard } from './guard/authguard';
+import { AdminPageProductComponent } from './pages/admin/admin-page-product/admin-page-product.component';
 
 
 export const routes: Routes = [
@@ -24,6 +25,7 @@ export const routes: Routes = [
     {path: 'confirmation', component: ConfirmationComponent},
     {path: 'admin', component: AdminHomeComponent, canActivate: [AuthGuard]},
     {path: 'admin/category', component: AdminPageCategoryComponent, canActivate: [AuthGuard]},
+    {path: 'admin/product', component: AdminPageProductComponent, canActivate: [AuthGuard]},
     {path: 'login', component: LoginComponent}
 ]
 
