@@ -9,10 +9,10 @@ import { CategoryService } from 'src/app/services/category/category.service';
 })
 export class AdminProductComponent implements OnInit {
 
-  constructor(public productService: ProductService,
-    public categoryService: CategoryService) { }
+  constructor(public categoryService: CategoryService, public productService: ProductService) { }
 
   ngOnInit(): void {
+    this.categoryService.getListCategories();
   }
 
   changeCategory() {   

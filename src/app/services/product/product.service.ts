@@ -81,7 +81,14 @@ export class ProductService {
     throw new Error("Method not implemented.");
   }
   addProduct() {
-    throw new Error("Method not implemented.");
+    this.productSeleted.id = this.listProducts[this.listProducts.length - 1].id + 1;
+    this.productSeleted.avaliable = "Yes";
+    this.listProducts.push(this.productSeleted)
+    this.http.post<Product[]>(URL_RESTAPI + '/products', this.productSeleted).subscribe(
+      list => {
+        this.getListProducts();
+      }
+    )
   }
 
   deleteProduct(id: number) {
